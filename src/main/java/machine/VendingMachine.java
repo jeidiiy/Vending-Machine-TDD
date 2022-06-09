@@ -28,6 +28,16 @@ public class VendingMachine {
         beverages.add(BeverageFactory.create(eBeverage));
     }
 
+    public int getBalance() {
+        return money;
+    }
+
+    public Beverage takeOutBeverage(EBeverage eBeverage) {
+        Beverage beverage = getBeverage(eBeverage);
+        money -= beverage.getPrice();
+        return beverage;
+    }
+
     private boolean isNotExistStock(EBeverage eBeverage) {
         Queue<Beverage> beverages = stock.get(eBeverage);
         return beverages == null || beverages.size() == 0;
@@ -39,15 +49,5 @@ public class VendingMachine {
         }
         Queue<Beverage> beverages = stock.get(eBeverage);
         return beverages.poll();
-    }
-
-    public int getBalance() {
-        return money;
-    }
-
-    public Beverage selectBeverage(EBeverage eBeverage) {
-        Beverage beverage = getBeverage(eBeverage);
-        money -= beverage.getPrice();
-        return beverage;
     }
 }

@@ -12,7 +12,7 @@ public class AppTests {
         VendingMachine vendingMachine = new VendingMachine();
         vendingMachine.stockUp(WATER);
         vendingMachine.inputMoney(1000);
-        Beverage water = vendingMachine.selectBeverage(WATER);
+        Beverage water = vendingMachine.takeOutBeverage(WATER);
         assertEquals(water.getName(), "water");
         assertEquals(0, vendingMachine.getBalance());
     }
