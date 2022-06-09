@@ -3,7 +3,6 @@ package beverage;
 public class Sprite extends AbstractBeverage {
 
     public Sprite() {
-        super("sprite", 1100);
+        super(EBeverage.SPRITE.name(), 1100);
     }
-
 }

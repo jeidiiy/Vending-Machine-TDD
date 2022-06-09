@@ -2,8 +2,7 @@ package beverage;
 
 public class Water extends AbstractBeverage {
 
-
     public Water() {
-        super("water", 1000);
+        super(EBeverage.WATER.name(), 1000);
     }
 }

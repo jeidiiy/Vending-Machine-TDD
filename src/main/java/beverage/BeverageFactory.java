@@ -4,17 +4,15 @@ import exception.BeverageNotFoundException;
 
 public class BeverageFactory {
 
-    public static Beverage create(String beverageName) {
-        beverageName = beverageName.toLowerCase();
-        switch (beverageName) {
-            case "coke":
+    public static Beverage create(EBeverage eBeverage) {
+        switch (eBeverage) {
+            case COKE:
                 return new Coke();
-            case "sprite":
+            case SPRITE:
                 return new Sprite();
-            case "water":
+            case WATER:
                 return new Water();
-            default:
-                throw new BeverageNotFoundException(beverageName);
         }
+        throw new BeverageNotFoundException();
     }
 }

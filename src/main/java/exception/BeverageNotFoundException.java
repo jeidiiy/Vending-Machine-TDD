@@ -1,7 +1,7 @@
 package exception;
 
 public class BeverageNotFoundException extends RuntimeException {
-    public BeverageNotFoundException(String beverage) {
-        super("Not found beverage.Beverage: " + beverage);
+    public BeverageNotFoundException() {
+        super("Not found beverage. Check your Input");
     }
 }

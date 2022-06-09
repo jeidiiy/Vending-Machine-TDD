@@ -3,6 +3,6 @@ package beverage;
 public class Coke extends AbstractBeverage {
 
     public Coke() {
-        super("coke", 1200);
+        super(EBeverage.COKE.name(), 1200);
     }
 }
