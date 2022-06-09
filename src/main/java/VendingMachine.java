@@ -11,11 +11,14 @@ public class VendingMachine {
     public int getBalance() {
         return money;
     }
-    public Optional<Water> selectBeverage(String beverageName) {
+    public Optional<Beverage> selectBeverage(String beverageName) {
         beverageName = beverageName.toUpperCase();
         if (beverageName.equals("WATER")) {
             money -= 1000;
             return Optional.of(new Water());
+        } else if (beverageName.equals("COKE")) {
+            money -= 1200;
+            return Optional.of(new Coke());
         }
         return Optional.empty();
     }

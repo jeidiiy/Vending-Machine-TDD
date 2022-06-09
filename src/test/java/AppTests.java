@@ -10,9 +10,19 @@ public class AppTests {
     void testGetWater() {
         VendingMachine vendingMachine = new VendingMachine();
         vendingMachine.inputMoney(1000);
-        Optional<Water> optionalWater = vendingMachine.selectBeverage("water");
-        Water water = optionalWater.get();
+        Optional<Beverage> optionalWater = vendingMachine.selectBeverage("water");
+        Beverage water = optionalWater.get();
         assertEquals(water.getName(), "water");
+        assertEquals(0, vendingMachine.getBalance());
+    }
+
+    @Test
+    void testGetCoke() {
+        VendingMachine vendingMachine = new VendingMachine();
+        vendingMachine.inputMoney(1200);
+        Optional<Beverage> optionalCoke = vendingMachine.selectBeverage("coke");
+        Beverage coke = optionalCoke.get();
+        assertEquals(coke.getName(), "coke");
         assertEquals(0, vendingMachine.getBalance());
     }
 }

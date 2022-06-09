@@ -1,9 +1,9 @@
-public class Water implements Beverage {
+public class Coke implements Beverage {
 
     private final String name;
 
-    public Water() {
-        this.name = "water";
+    public Coke() {
+        this.name = "coke";
     }
 
     @Override
