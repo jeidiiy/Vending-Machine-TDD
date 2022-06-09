@@ -2,7 +2,7 @@ package beverage;
 
 import java.util.Objects;
 
-public class AbstractBeverage implements Beverage {
+public abstract class AbstractBeverage implements Beverage {
 
     private final String name;
 
