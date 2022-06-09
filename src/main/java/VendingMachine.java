@@ -19,6 +19,9 @@ public class VendingMachine {
         } else if (beverageName.equals("COKE")) {
             money -= 1200;
             return Optional.of(new Coke());
+        } else if (beverageName.equals("SPRITE")) {
+            money -= 1100;
+            return Optional.of(new Sprite());
         }
         return Optional.empty();
     }

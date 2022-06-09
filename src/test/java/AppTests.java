@@ -25,4 +25,14 @@ public class AppTests {
         assertEquals(coke.getName(), "coke");
         assertEquals(0, vendingMachine.getBalance());
     }
+
+    @Test
+    void testGetSprite() {
+        VendingMachine vendingMachine = new VendingMachine();
+        vendingMachine.inputMoney(1100);
+        Optional<Beverage> optionalSprite = vendingMachine.selectBeverage("sprite");
+        Beverage sprite = optionalSprite.get();
+        assertEquals(sprite.getName(), "sprite");
+        assertEquals(0, vendingMachine.getBalance());
+    }
 }
