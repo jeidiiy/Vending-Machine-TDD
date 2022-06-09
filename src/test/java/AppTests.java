@@ -1,17 +1,15 @@
 import org.junit.jupiter.api.Test;
 
-import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AppTests {
 
     @Test
     void testGetWater() {
         VendingMachine vendingMachine = new VendingMachine();
+        vendingMachine.stockUp("water");
         vendingMachine.inputMoney(1000);
-        Optional<Beverage> optionalWater = vendingMachine.selectBeverage("water");
-        Beverage water = optionalWater.get();
+        Beverage water = vendingMachine.selectBeverage("water");
         assertEquals(water.getName(), "water");
         assertEquals(0, vendingMachine.getBalance());
     }
@@ -19,9 +17,9 @@ public class AppTests {
     @Test
     void testGetCoke() {
         VendingMachine vendingMachine = new VendingMachine();
+        vendingMachine.stockUp("coke");
         vendingMachine.inputMoney(1200);
-        Optional<Beverage> optionalCoke = vendingMachine.selectBeverage("coke");
-        Beverage coke = optionalCoke.get();
+        Beverage coke = vendingMachine.selectBeverage("coke");
         assertEquals(coke.getName(), "coke");
         assertEquals(0, vendingMachine.getBalance());
     }
@@ -29,9 +27,9 @@ public class AppTests {
     @Test
     void testGetSprite() {
         VendingMachine vendingMachine = new VendingMachine();
+        vendingMachine.stockUp("sprite");
         vendingMachine.inputMoney(1100);
-        Optional<Beverage> optionalSprite = vendingMachine.selectBeverage("sprite");
-        Beverage sprite = optionalSprite.get();
+        Beverage sprite = vendingMachine.selectBeverage("sprite");
         assertEquals(sprite.getName(), "sprite");
         assertEquals(0, vendingMachine.getBalance());
     }

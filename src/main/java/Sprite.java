@@ -1,13 +1,7 @@
-public class Sprite implements Beverage {
-
-    private final String name;
+public class Sprite extends AbstractBeverage {
 
     public Sprite() {
-        this.name = "sprite";
+        super("sprite", 1100);
     }
 
-    @Override
-    public String getName() {
-        return name;
-    }
 }

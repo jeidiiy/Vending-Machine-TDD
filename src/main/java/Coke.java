@@ -1,13 +1,6 @@
-public class Coke implements Beverage {
-
-    private final String name;
+public class Coke extends AbstractBeverage {
 
     public Coke() {
-        this.name = "coke";
-    }
-
-    @Override
-    public String getName() {
-        return name;
+        super("coke", 1200);
     }
 }

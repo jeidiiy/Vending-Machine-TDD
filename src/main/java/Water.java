@@ -1,13 +1,7 @@
-public class Water implements Beverage {
+public class Water extends AbstractBeverage {
 
-    private final String name;
 
     public Water() {
-        this.name = "water";
-    }
-
-    @Override
-    public String getName() {
-        return name;
+        super("water", 1000);
     }
 }
