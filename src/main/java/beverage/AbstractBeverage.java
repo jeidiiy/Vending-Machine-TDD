@@ -1,3 +1,5 @@
+package beverage;
+
 import java.util.Objects;
 
 public class AbstractBeverage implements Beverage {

@@ -1,3 +1,9 @@
+package machine;
+
+import beverage.Beverage;
+import beverage.BeverageFactory;
+import exception.BeverageStockIsNotExistException;
+
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;

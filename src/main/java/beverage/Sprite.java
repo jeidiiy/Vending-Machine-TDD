@@ -1,3 +1,5 @@
+package beverage;
+
 public class Sprite extends AbstractBeverage {
 
     public Sprite() {

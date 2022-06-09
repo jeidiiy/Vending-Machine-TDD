@@ -1,3 +1,7 @@
+package beverage;
+
+import exception.BeverageNotFoundException;
+
 public class BeverageFactory {
 
     public static Beverage create(String beverageName) {

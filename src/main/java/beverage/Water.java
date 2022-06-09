@@ -1,3 +1,5 @@
+package beverage;
+
 public class Water extends AbstractBeverage {
 
 

@@ -1,3 +1,5 @@
+package beverage;
+
 public class Coke extends AbstractBeverage {
 
     public Coke() {

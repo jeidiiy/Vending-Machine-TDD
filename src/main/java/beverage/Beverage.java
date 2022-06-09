@@ -1,3 +1,5 @@
+package beverage;
+
 public interface Beverage {
     String getName();
 
